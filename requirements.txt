@@ -1,0 +1,9 @@
+python-telegram-bot[ext]>=20.0
+google-generativeai
+google-api-python-client
+python-dotenv
+jieba
+cachetools
+diskcache
+Pillow
+matplotlib
