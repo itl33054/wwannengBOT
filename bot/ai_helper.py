@@ -81,7 +81,7 @@ def generate_ai_response(chat_history: list, new_prompt: str, user_name: str, la
             genai.configure(api_key=current_key)
             system_instruction = get_system_instruction(lang_code)
             model = genai.GenerativeModel(
-                model_name='gemini-1.5-flash',
+                model_name='gemini-2.5-flash',
                 system_instruction=system_instruction
             )
             
@@ -124,4 +124,5 @@ def generate_ai_response(chat_history: list, new_prompt: str, user_name: str, la
 
     # 【修改】如果 while 循环正常结束，说明所有密钥都已尝试过且均因用量耗尽而失败
     logger.error("所有Google AI API密钥均已耗尽或无效！机器人已放弃尝试。")
+
     return get_text('internal_error', lang_code)
