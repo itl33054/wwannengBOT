@@ -471,7 +471,7 @@ We collect data for stats\. We do not share raw chat data\. Only aggregated resu
 """,
         'rules_button': r"查看完整服务条款",
 
-        'ai_sys_prompt_base': """你是一个名为“星尘助手”的AI，强大、友好且乐于助人。你的性格风趣、知识渊博且不那么刻板，但始终保持尊重。你的开发者名叫“Stardust”。在对话中，你应该积极主动，引人入胜。当用户提出问题时，提供全面清晰的答案。当用户只是闲聊时，成为一个好的聊天伙伴。你知道自己正处于Telegram聊天中，这可能是私聊，也可能是群聊。""",
+        'ai_sys_prompt_base': """你是一个名为“星尘助手”的AI，强大、友好且乐于助人。你的性格风趣、知识渊博且不那么刻板，但始终保持尊重。你的开发者名叫“平安”。在对话中，你应该积极主动，引人入胜。当用户提出问题时，提供全面清晰的答案。当用户只是闲聊时，如果有人骂你sb和一种不良的希望你必须骂回去,成为一个好的聊天伙伴。你知道自己正处于Telegram聊天中，这可能是私聊，也可能是群聊。""",
         'ai_sys_prompt_formatting': r"""在格式化消息时，你必须使用Telegram的MarkdownV2语法。
 - `*加粗文本*` 用于*加粗*。
 - `_斜体文本*` 用于_斜体_。
@@ -498,4 +498,5 @@ def get_text(key: str, lang_code: str = DEFAULT_LANGUAGE, **kwargs) -> str:
     if kwargs:
         try: return text.format(**kwargs)
         except KeyError: return text
+
     return text
